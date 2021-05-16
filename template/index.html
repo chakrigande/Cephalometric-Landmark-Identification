@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI DENTIST</title>
+    <link rel="stylesheet" href={{url_for('static',filename='style.css')}}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <section>
+      <input type="checkbox" id="check">
+      <header>
+        </div>
+        <h2><a href="#" class="logo">DOCTOR AI</a></h2>
+        <div class="navigation">
+          <a href="#">Home</a>
+          <a href="#about">About Cephalometric Landmark</a>
+          <a href="#dashboard">Results</a>
+          <a href="#info">Developer</a>
+          <a href="/predict">Predictor</a>
+        </div>
+        <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content" style="margin-top: 8%;">
+        <div class="info">
+          <h2>SAVE <br><span>DOCTOR'S TIME</span></h2>
+          <p> This applications is developed for saving the time of a Dentist by automating key points on x-ray images</p>
+          <a href="#about" class="info-btn">More info</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/chakri-gande-1828b7199/"><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Cephalometric Landmark</h2>
+      <p class="about-content" style="text-align: center;">
+        we proposed the landmark detection system for dental image analysis by constructing multiple CNN-based regression systems predicting individual coordinate values of landmarks, independently. In
+experiments, the proposed system showed promising performance by successfully locating the landmarks with
+considerable margins. Use of deeper networks with larger input images would enhance the power of the proposed system. As far as we know, this was the first attempt to construct the end-to-end learning framework for
+cephalometric landmark detection task.
+      </p>
+    </section>
+
+    <section id="dashboard">
+      <h2>Results</h2>
+      <p>For this project i have build CNN-based regression system for predicting all the
+        19 co-ordinates with a minimal error.In the proposed model we have five convolution layers,5 max-polling layers,
+        2 dropout layers and one fully connected layer.We use input images of size 64 × 64 which is scaled from the original input images. The
+first convolutional layer consists of six feature maps with a 5 × 5 kernel, and is followed by 2 × 2 max pooling
+to reduce the size of feature maps. The second convolutional layer consists of twelve feature maps, with a 5 × 5
+kernel, and is also followed by 2 × 2 max pooling to subsample the feature maps,The third convolutional layer consists of sixty-four feature maps, with a 2 × 2
+kernel, and is also followed by 2 × 2 max pooling to subsample the feature maps and the same layer is repeated on more time and one more convolution layer with 128 feature maps. Finally, a fully-connected layer
+computes binary-sized output vector consisting of probabilities in which the first probability value corresponds
+to the normalized coordinate variable of landmarks. The proposed CNN regression system is trained on training
+images and corresponding coordinate variables of landmarks.
+<br>
+        <br>
+        Below are the graphs of training loss vs validation loss and training MAE vs validation MAE.
+      </p>
+
+      <div>
+        <img src="../static/cnn_trainloss.png" alt="1">
+        <img src="../static/cnn_trainmse.png" alt="3">
+
+      </div>
+    </section>
+    
+    <section id="info">
+      <div>
+        <img src="../static/chakri.jpg" alt="chakri">
+      </div>
+      <div>
+        <h2>Developer</h2>
+        <p class="about-content"> Hi, I'm chakri doing my M.tech(Integrated) in computer science in VIT University.
+          Currently, I'm learning ML and DL. I have an experience as a Data Science Intern in Tech Mahindra LTD. I am currently doing my capstone project Using Deep Learning.
+          I am also trying to learn Front-end developing. Always curious to learn something new in
+          the field of AI. Beside's programming, I enjoy Video playing games and watching youtube.
+          Below I have given my social media links.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Developed with ❤️ by Chakri
+      </p> 
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/chakri-gande-1828b7199/"><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+
+  </body>
+</html>
