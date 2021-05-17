@@ -77,7 +77,7 @@ def upload():
         img = Image.open(file_path)
         draw = ImageDraw.Draw(img)
         for t,q in zip(x,y):
-            draw.ellipse((t - 5, q - 5, t + 5, q + 5), fill=(255, 0, 0, 0))
+            draw.ellipse((t - 8, q - 8, t + 8, q + 8), fill=(255, 0, 0, 0))
         p = 'uploads/pic' + '.png'
         img.save(p, "JPEG")
         with open("uploads/pic.png", "rb") as image_file:
